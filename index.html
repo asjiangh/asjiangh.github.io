@@ -240,9 +240,11 @@
         <h2 id="1-Tensorflow-gpu无法使用gpu"><a href="#1-Tensorflow-gpu无法使用gpu" class="headerlink" title="1. Tensorflow-gpu无法使用gpu"></a>1. Tensorflow-gpu无法使用gpu</h2><h4 id="Step1-卸载现有的tensorflow"><a href="#Step1-卸载现有的tensorflow" class="headerlink" title="Step1: 卸载现有的tensorflow"></a>Step1: 卸载现有的tensorflow</h4><p><em>pip uninstall tensorflow</em></p>
 <p><em>pip uninstall tensorflow-gpu</em></p>
 <h4 id="Step2-重新安装gpu版本"><a href="#Step2-重新安装gpu版本" class="headerlink" title="Step2: 重新安装gpu版本"></a>Step2: 重新安装gpu版本</h4><p><em>pip install tensorflow-gpu</em></p>
+<p>&nbsp;</p>
 <h2 id="2-TypeError-while-loop-got-an-unexpected-keyword-argument-‘maximum-iterations’"><a href="#2-TypeError-while-loop-got-an-unexpected-keyword-argument-‘maximum-iterations’" class="headerlink" title="2. TypeError: while_loop() got an unexpected keyword argument ‘maximum_iterations’"></a>2. TypeError: while_loop() got an unexpected keyword argument ‘maximum_iterations’</h2><h4 id="CUDA与tensorflow版本不匹配"><a href="#CUDA与tensorflow版本不匹配" class="headerlink" title="CUDA与tensorflow版本不匹配"></a>CUDA与tensorflow版本不匹配</h4><p><em>pip install tensorflow==1.4.0</em></p>
 <p>或</p>
 <p><em>pip install keras==2.1.2</em></p>
+<p>&nbsp;</p>
 <h2 id="3-ImportError-libcublas-so-9-0-cannot-open-shared-object-file-No-such-file-or-directory"><a href="#3-ImportError-libcublas-so-9-0-cannot-open-shared-object-file-No-such-file-or-directory" class="headerlink" title="3. ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory"></a>3. ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory</h2><h4 id="CUDA与tensorflow版本不匹配-1"><a href="#CUDA与tensorflow版本不匹配-1" class="headerlink" title="CUDA与tensorflow版本不匹配"></a>CUDA与tensorflow版本不匹配</h4><p><em>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64</em></p>
 <p><em>export PATH=$PATH:/usr/local/cuda-9.0/bin</em></p>
 <p><em>export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0</em></p>
