@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tensorflow-gpu问题汇总 | Asjiangh&#39;s Blog</title>
+  <title>Archives: 2019/8 | Asjiangh&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. Tensorflow-gpu无法使用gpuStep1: 卸载现有的tensorflowpip uninstall tensorflow pip uninstall tensorflow-gpu Step2: 重新安装gpu版本pip install tensorflow-gpu &amp;nbsp; 2. TypeError: while_loop() got an unexpected keywo">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Tensorflow-gpu问题汇总">
-<meta property="og:url" content="http://yoursite.com/2019/07/11/Tensorflow-gpu问题汇总/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Asjiangh&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
 <meta property="og:site_name" content="Asjiangh&#39;s Blog">
-<meta property="og:description" content="1. Tensorflow-gpu无法使用gpuStep1: 卸载现有的tensorflowpip uninstall tensorflow pip uninstall tensorflow-gpu Step2: 重新安装gpu版本pip install tensorflow-gpu &amp;nbsp; 2. TypeError: while_loop() got an unexpected keywo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-11T14:27:27.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tensorflow-gpu问题汇总">
-<meta name="twitter:description" content="1. Tensorflow-gpu无法使用gpuStep1: 卸载现有的tensorflowpip uninstall tensorflow pip uninstall tensorflow-gpu Step2: 重新安装gpu版本pip install tensorflow-gpu &amp;nbsp; 2. TypeError: while_loop() got an unexpected keywo">
+<meta name="twitter:title" content="Asjiangh&#39;s Blog">
   
     <link rel="alternative" href="/atom.xml" title="Asjiangh&#39;s Blog" type="application/atom+xml">
   
@@ -154,171 +150,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Tensorflow-gpu问题汇总" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Tensorflow-gpu问题汇总
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/08/29/论文阅读/" class="archive-article-date">
+  	<time datetime="2019-08-29T08:08:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/08/29/论文阅读/">论文阅读</a>
     </h1>
   
 
-        
-        <a href="/2019/07/11/Tensorflow-gpu问题汇总/" class="archive-article-date">
-  	<time datetime="2019-07-11T13:30:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-Tensorflow-gpu无法使用gpu"><a href="#1-Tensorflow-gpu无法使用gpu" class="headerlink" title="1. Tensorflow-gpu无法使用gpu"></a>1. Tensorflow-gpu无法使用gpu</h2><h4 id="Step1-卸载现有的tensorflow"><a href="#Step1-卸载现有的tensorflow" class="headerlink" title="Step1: 卸载现有的tensorflow"></a>Step1: 卸载现有的tensorflow</h4><p><em>pip uninstall tensorflow</em></p>
-<p><em>pip uninstall tensorflow-gpu</em></p>
-<h4 id="Step2-重新安装gpu版本"><a href="#Step2-重新安装gpu版本" class="headerlink" title="Step2: 重新安装gpu版本"></a>Step2: 重新安装gpu版本</h4><p><em>pip install tensorflow-gpu</em></p>
-<p>&nbsp;</p>
-<h2 id="2-TypeError-while-loop-got-an-unexpected-keyword-argument-‘maximum-iterations’"><a href="#2-TypeError-while-loop-got-an-unexpected-keyword-argument-‘maximum-iterations’" class="headerlink" title="2. TypeError: while_loop() got an unexpected keyword argument ‘maximum_iterations’"></a>2. TypeError: while_loop() got an unexpected keyword argument ‘maximum_iterations’</h2><h4 id="CUDA与tensorflow版本不匹配"><a href="#CUDA与tensorflow版本不匹配" class="headerlink" title="CUDA与tensorflow版本不匹配"></a>CUDA与tensorflow版本不匹配</h4><p><em>pip install tensorflow==1.4.0</em></p>
-<p>或</p>
-<p><em>pip install keras==2.1.2</em></p>
-<p>&nbsp;</p>
-<h2 id="3-ImportError-libcublas-so-9-0-cannot-open-shared-object-file-No-such-file-or-directory"><a href="#3-ImportError-libcublas-so-9-0-cannot-open-shared-object-file-No-such-file-or-directory" class="headerlink" title="3. ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory"></a>3. ImportError: libcublas.so.9.0: cannot open shared object file: No such file or directory</h2><h4 id="CUDA与tensorflow版本不匹配-1"><a href="#CUDA与tensorflow版本不匹配-1" class="headerlink" title="CUDA与tensorflow版本不匹配"></a>CUDA与tensorflow版本不匹配</h4><p><em>export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-9.0/lib64</em></p>
-<p><em>export PATH=$PATH:/usr/local/cuda-9.0/bin</em></p>
-<p><em>export CUDA_HOME=$CUDA_HOME:/usr/local/cuda-9.0</em></p>
-<h4 id="参考链接："><a href="#参考链接：" class="headerlink" title="参考链接："></a>参考链接：</h4><p><a href="https://www.jianshu.com/p/6f54b4f96556" target="_blank" rel="noopener">https://www.jianshu.com/p/6f54b4f96556</a><br><a href="https://blog.csdn.net/zyh2004883/article/details/84337872" target="_blank" rel="noopener">https://blog.csdn.net/zyh2004883/article/details/84337872</a></p>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/11/Tensorflow-gpu问题汇总/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/08/29/论文阅读/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          论文阅读
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -341,8 +215,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

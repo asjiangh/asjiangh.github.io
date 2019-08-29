@@ -152,6 +152,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-论文阅读" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/29/论文阅读/">论文阅读</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/29/论文阅读/" class="archive-article-date">
+  	<time datetime="2019-08-29T08:08:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Exploring-Deep-Spectrum-Representations-via-Attention-Based-Recurrent-and-Convolutional-Neural-Networks-for-Speech-Emotion-Recognition"><a href="#Exploring-Deep-Spectrum-Representations-via-Attention-Based-Recurrent-and-Convolutional-Neural-Networks-for-Speech-Emotion-Recognition" class="headerlink" title="Exploring Deep Spectrum Representations via Attention-Based Recurrent and Convolutional Neural Networks for Speech Emotion Recognition"></a>Exploring Deep Spectrum Representations via Attention-Based Recurrent and Convolutional Neural Networks for Speech Emotion Recognition</h2><h3 id="数据（声谱图生成）"><a href="#数据（声谱图生成）" class="headerlink" title="数据（声谱图生成）"></a>数据（声谱图生成）</h3><p>IEMOCAP，包含improvise（即兴）和script（剧本）两部分，只使用impro<br>将excited加到happy里，最终四个类：<em>angry, happy, sad, neutral</em><br>数据分布:  </p>
+<p>Leave-One-Session-Out策略，4个Session训练，1个Session验证和测试<br>librosa对数据做STFT，window=25ms，rate=10ms<br>librosa转换为mel spectrogram（mel bands=40）</p>
+<h3 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h3><h4 id="细节"><a href="#细节" class="headerlink" title="细节"></a>细节</h4><p>优化器：Adam（lr=1e-3，decay=1e-6）<br>epoch：100<br>batch：100<br>BN + Dropout + ReLU  </p>
+<h4 id="分支一：Attention-BLSTM"><a href="#分支一：Attention-BLSTM" class="headerlink" title="分支一：Attention BLSTM"></a>分支一：Attention BLSTM</h4><p>BLSTM（128×2） + BLSTM（128×2） + attention(线性，指无激活函数如tanh？)  </p>
+<h4 id="分支二：Fully-Convolution-Network"><a href="#分支二：Fully-Convolution-Network" class="headerlink" title="分支二：Fully Convolution Network"></a>分支二：Fully Convolution Network</h4><p>3层，filters分别为64,128,128，步长strides统一为1（卷积核大小？） </p>
+<h2 id="Attention-Based-Fully-Convolutional-Network-for-Speech-Emotion-Recognition"><a href="#Attention-Based-Fully-Convolutional-Network-for-Speech-Emotion-Recognition" class="headerlink" title="Attention Based Fully Convolutional Network for Speech Emotion Recognition"></a>Attention Based Fully Convolutional Network for Speech Emotion Recognition</h2><h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h3><p>hamming，window=40ms，rate=10ms，DFT=800<br>取声谱低频部分，200维（频率），与paper17相同</p>
+<h3 id="网络-1"><a href="#网络-1" class="headerlink" title="网络"></a>网络</h3><p>不需要pad到相同长度<br>以AlexNet为例，移除顶部的所有全连接层，记为FCN，得到特征图输出记为F×T×C，F、T分别对应频率轴和时间轴。<br>AlexNet前两个卷积后有LRN层，所有卷积使用ReLU激活。<br>记L=F×T，则FCN输出为L×C，其中L非固定，这样每个C维向量对应原来的一个声谱图。记每个C维向量为a<sub>i</sub><br>FCN输出通过MLP（tanh激活），得到新的a<sub>i</sub>，与线性向量u内积，然后softmax，最后计算注意力因子c，并有λ控制softmax程度。取λ=0.3<br>AlexNet无预训练 vs. AlexNet ImageNet预训练</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/29/论文阅读/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Tensorflow-gpu问题汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
